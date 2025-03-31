@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log("MongoDB connected successfully!"))
     .catch((error) => console.log(error))
 
-const port=3008;
+const port=process.env.port || 3008;
 app.use(express.json())
 app.use(cors())
 app.use('/vendor', vendorRoutes);
