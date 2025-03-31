@@ -27,3 +27,6 @@ app.use('/uploads', express.static('uploads'));
 app.listen(port,()=>{
     console.log("Server is running at 3008")
 })
+app.use('/', (req, res) => {
+    res.send("<h1> Welcome to SUBY");
+})
